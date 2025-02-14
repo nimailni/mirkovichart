@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portraits</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="paintings.html">Paintings</a>
+    <a href="portraits.html">Portraits</a>
+  </nav>
+  <h1>Portraits</h1>
+
+  <!-- Modal for displaying images -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01" />
+  </div>
+
+  <div class="gallery">
+    <img src="images/01.jpg" alt="Portrait 1" onclick="openModal(this)" />
+    <img src="images/02.jpg" alt="Portrait 2" onclick="openModal(this)" />
+    <img src="images/03.jpg" alt="Portrait 3" onclick="openModal(this)" />
+    <img src="images/04.jpg" alt="Portrait 4" onclick="openModal(this)" />
+    <img src="images/05.jpg" alt="Portrait 5" onclick="openModal(this)" />
+    <img src="images/06.jpg" alt="Portrait 6" onclick="openModal(this)" />
+    <img src="images/07.jpg" alt="Portrait 7" onclick="openModal(this)" />
+    <img src="images/08.jpg" alt="Portrait 8" onclick="openModal(this)" />
+    <img src="images/09.jpg" alt="Portrait 9" onclick="openModal(this)" />
+    <img src="images/10.jpg" alt="Portrait 10" onclick="openModal(this)" />
+    <img src="images/11.jpg" alt="Portrait 11" onclick="openModal(this)" />
+    <img src="images/12.jpg" alt="Portrait 12" onclick="openModal(this)" />
+    <img src="images/13.jpg" alt="Portrait 13" onclick="openModal(this)" />
+    <img src="images/14.jpg" alt="Portrait 14" onclick="openModal(this)" />
+    <img src="images/15.jpg" alt="Portrait 15" onclick="openModal(this)" />
+    <img src="images/17.jpg" alt="Portrait 17" onclick="openModal(this)" />
+    <img src="images/18.jpg" alt="Portrait 18" onclick="openModal(this)" />
+    <img src="images/19.jpg" alt="Portrait 19" onclick="openModal(this)" />
+    <img src="images/20.jpg" alt="Portrait 20" onclick="openModal(this)" />
+    <img src="images/21.jpg" alt="Portrait 21" onclick="openModal(this)" />
+  </div>
+
+  <script>
+    function openModal(img) {
+      const modal = document.getElementById('myModal');
+      const modalImg = document.getElementById('img01');
+      modal.style.display = 'block';
+      modalImg.src = img.src;
+    }
+
+    document.getElementsByClassName('close')[0].onclick = function() { 
+      document.getElementById('myModal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
