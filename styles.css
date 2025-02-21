@@ -1,28 +1,40 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #121212; /* Dark background */
-    color: #f0f0f0;             /* Light text for contrast */
+    font-family: 'Poppins', sans-serif;
+    color: white; /* Ensures text is readable on dark background */
+    background-color: black; /* Keep it dark if needed */
   }
   
+  /* Style for the navigation menu */
   nav {
-    background: #1f1f1f;         /* Darker nav background */
-    padding: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: #222; /* Slightly lighter black */
+    padding: 10px 0;
     text-align: center;
   }
   
   nav a {
-    color: #f0f0f0;
+    color: white;
     text-decoration: none;
     margin: 0 15px;
+    padding: 8px 12px;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
   }
   
-  h1, p {
-    text-align: center;
-    margin: 20px 0;
-    color: #f0f0f0;
+  nav a:hover {
+    color: #f39c12; /* Changes to a golden shade on hover */
   }
+  
+  /* Style for the title */
+  h1 {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+ 
   
   .gallery {
     display: grid;
@@ -95,4 +107,23 @@ body {
   .close:hover {
     color: #ccc;
   }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Adjust for spacing */
+    justify-content: center;
+  }
+  
+  .gallery img {
+    width: 180px;  /* Slightly narrower */
+    height: 240px; /* Taller for a portrait-like ratio */
+    object-fit: cover; /* Ensures images fill the frame without stretching */
+    object-position: top; /* Keeps faces visible, cuts only the bottom */
+    border-radius: 5px; /* Optional: Rounds corners slightly */
+    cursor: pointer;
+  }
+  
+  
+  
   
