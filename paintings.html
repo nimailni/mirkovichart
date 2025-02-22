@@ -1,6 +1,3 @@
-
-
-<!-- paintings.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,20 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Paintings</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("Re-initializing GLightbox for Paintings page...");
+
+    if (typeof GLightbox === "function") {
+      console.log("GLightbox found! Initializing...");
+      window.lightbox = GLightbox({
+        selector: ".glightbox",
+        descPosition: "none" // Ensures no captions/titles appear
+      });
+      console.log("GLightbox initialized successfully!");
+    } else {
+      console.error("GLightbox is not available on this page!");
+    }
+  });
+</script>
+
 <body>
   <nav>
     <a href="index.html">Home</a>
     <a href="paintings.html">Paintings</a>
     <a href="portraits.html">Portraits</a>
   </nav>
+  
   <h1>Paintings</h1>
+
   <div class="gallery">
-    <a href="images/painting1.jpg"><img src="images/painting1_thumb.jpg" alt="Painting 1" /></a>
-    <a href="images/painting2.jpg"><img src="images/painting2_thumb.jpg" alt="Painting 2" /></a>
-    <a href="images/painting3.jpg"><img src="images/painting3_thumb.jpg" alt="Painting 3" /></a>
-    <a href="images/painting4.jpg"><img src="images/painting4_thumb.jpg" alt="Painting 4" /></a>
+    <a href="images/l001.jpg" class="glightbox" data-gallery="paintings">
+        <img src="images/l001.jpg" alt="Painting 1">
+    </a>
+    <a href="images/l002.jpg" class="glightbox" data-gallery="paintings">
+        <img src="images/l002.jpg" alt="Painting 2">
+    </a>
+    <a href="images/l003.jpg" class="glightbox" data-gallery="paintings">
+        <img src="images/l003.jpg" alt="Painting 3">
+    </a>
+ 
+   
+
+    <a href="images/p001.jpg" class="glightbox" data-gallery="paintings">
+        <img src="images/p001.jpg" alt="Painting 4">
+    </a>
+    
+    <a href="images/p002.jpg" class="glightbox" data-gallery="paintings">
+        <img src="images/p002.jpg" alt="Painting 5">
+    </a>
+    <a href="images/p003.jpg" class="glightbox" data-gallery="paintings">
+        <img src="images/p003.jpg" alt="Painting 6">
+    </a>
+    <a href="images/p004.jpg" class="glightbox" data-gallery="paintings">
+        <img src="images/p004.jpg" alt="Painting 7">
+    </a>
   </div>
 </body>
 </html>
-
