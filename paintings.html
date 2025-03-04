@@ -7,13 +7,15 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- ✅ Version: v1.2 -->
 </head>
 
 <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    console.log("Re-initializing GLightbox for Paintings page...");
+    console.log("Re-initializing GLightbox for Paintings page - v1.2"); // ✅ Version added in log
 
     if (typeof GLightbox === "function") {
       console.log("GLightbox found! Initializing...");
@@ -29,6 +31,8 @@
 </script>
 
 <body>
+  <!-- ✅ Page Version: v1.2 -->
+  
   <nav>
     <a href="index.html">Home</a>
     <a href="paintings.html">Paintings</a>
@@ -38,31 +42,36 @@
   <h1>Paintings</h1>
 
   <div class="gallery">
-    <a href="images/l001.jpg" class="glightbox" data-gallery="paintings">
-        <img src="images/l001.jpg" alt="Painting 1">
-    </a>
-    <a href="images/l002.jpg" class="glightbox" data-gallery="paintings">
-        <img src="images/l002.jpg" alt="Painting 2">
-    </a>
-    <a href="images/l003.jpg" class="glightbox" data-gallery="paintings">
-        <img src="images/l003.jpg" alt="Painting 3">
-    </a>
- 
-   
+    <!-- ✅ Landscape Images (l001 - l030) -->
+    <!-- Loop through l001 to l030 -->
+    <!-- You can easily add more images by extending this range -->
+    <!-- Example: l031.jpg, l032.jpg, etc. -->
+    <!-- START LANDSCAPE IMAGES -->
+    <script>
+      for (let i = 1; i <= 76; i++) {
+        let num = i.toString().padStart(3, "0"); // Format numbers (001, 002, etc.)
+        document.write(`
+          <a href="images/l${num}.jpg" class="glightbox" data-gallery="paintings">
+              <img src="images/l${num}.jpg" alt="Painting ${i}">
+          </a>
+        `);
+      }
+    </script>
+    <!-- ✅ Force a new row after landscapes -->
+    <div class="clear"></div>
 
-    <a href="images/p001.jpg" class="glightbox" data-gallery="paintings">
-        <img src="images/p001.jpg" alt="Painting 4">
-    </a>
-    
-    <a href="images/p002.jpg" class="glightbox" data-gallery="paintings">
-        <img src="images/p002.jpg" alt="Painting 5">
-    </a>
-    <a href="images/p003.jpg" class="glightbox" data-gallery="paintings">
-        <img src="images/p003.jpg" alt="Painting 6">
-    </a>
-    <a href="images/p004.jpg" class="glightbox" data-gallery="paintings">
-        <img src="images/p004.jpg" alt="Painting 7">
-    </a>
+    <!-- ✅ Portrait Images (p001 - p048) -->
+    <!-- START PORTRAIT IMAGES -->
+    <script>
+      for (let i = 1; i <= 92; i++) {
+        let num = i.toString().padStart(3, "0"); // Format numbers (001, 002, etc.)
+        document.write(`
+          <a href="images/p${num}.jpg" class="glightbox" data-gallery="paintings">
+              <img src="images/p${num}.jpg" alt="Painting ${30 + i}">
+          </a>
+        `);
+      }
+    </script>
   </div>
 </body>
 </html>

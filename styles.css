@@ -37,51 +37,69 @@ h1 {
     margin-top: 20px;
 }
 
+
+
 /* General Gallery Styling */
 .gallery {
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px; /* Adjusts spacing between images */
-    justify-content: center;
-    padding: 20px;
+    flex-wrap: wrap; /* ✅ Allows images to wrap naturally */
+    gap: 40px; /* ✅ Increased gap between images */
+    justify-content: space-around; /* ✅ Adds even spacing between images */
+    max-width: 1200px; /* ✅ Limits width to maintain balance */
+    margin: auto; /* ✅ Keeps the gallery centered */
 }
 
-/* Default Thumbnail Styles */
+/* ✅ Keep Image Aspect Ratios */
 .gallery img {
-    object-fit: cover; /* Ensures images fill their frame without stretching */
-    border-radius: 5px; /* Slight rounded corners for a modern look */
-    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+    object-fit: cover; /* ✅ Ensures images fill their frame without distortion */
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
     cursor: pointer;
 }
 
+/* ✅ Landscape Thumbnails */
 .gallery a[href^="images/l"] img {
-    width: 300px; /* Increased size for landscape thumbnails */
-    height: 200px;
+    width: 250px;
+    height: 170px;
 }
 
+/* ✅ Portrait Thumbnails */
 .gallery a[href^="images/p"] img {
-    width: 200px; /* Increased size for portrait thumbnails */
-    height: 300px;
+    width: 180px;
+    height: 270px;
 }
 
-/* Hover Effect */
-.gallery img:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.3);
+/* ✅ Responsive for Large Screens (Ensures spacing works properly) */
+@media (min-width: 1200px) {
+    .gallery {
+        max-width: 1400px;
+    }
 }
 
-/* Responsive Adjustments */
+/* ✅ Responsive for Tablets (Limits to 4-5 per row) */
+@media (max-width: 900px) {
+    .gallery {
+        max-width: 900px;
+        gap: 30px; /* ✅ Adjusts spacing for smaller screens */
+    }
+}
+
+/* ✅ Responsive for Mobile (Ensures 1 per row) */
 @media (max-width: 600px) {
     .gallery {
         flex-direction: column;
-        align-items: center; /* Centers images in mobile view */
+        align-items: center;
     }
 
     .gallery img {
-        width: 90% !important; /* Makes images take up most of the screen */
-        height: auto !important; /* Adjust height to maintain aspect ratio */
+        width: 90% !important;
+        height: auto !important;
     }
 }
+
+
+
+
 
 /* Modal Styling (for Lightbox Effect) */
 .modal {
@@ -116,4 +134,11 @@ h1 {
 
 .close:hover {
     color: #ccc;
+}
+
+
+/* ✅ Ensure the second group starts on a new row */
+.clear {
+    flex-basis: 100%; /* ✅ Forces a full row break */
+    height: 0;
 }
