@@ -142,3 +142,78 @@ h1 {
     flex-basis: 100%; /* ✅ Forces a full row break */
     height: 0;
 }
+
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #222; /* Dark background to match */
+    color: white;
+    font-size: 16px;
+}
+
+/* ✅ Fancy Font for "Mirkovich Art" */
+footer p:first-child {
+    font-family: 'Tangerine', cursive;
+    font-size: 36px; /* Adjust size if needed */
+    font-weight: 700; /* Bold Tangerine style */
+}
+
+/* ✅ Simple, elegant font for contact info */
+footer p:nth-child(2),
+footer p:nth-child(3),
+footer a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: white;
+}
+
+footer a {
+    color: #f39c12; /* Highlight email */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Bio Section Styling */
+.bio-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: justify;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+/* Bio Images */
+.bio-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.bio-image.left {
+    float: left;
+    margin-right: 20px;
+}
+
+.bio-image.right {
+    float: right;
+    margin-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bio-image {
+        width: 100%;
+        float: none;
+        display: block;
+        margin: 20px auto;
+    }
+}

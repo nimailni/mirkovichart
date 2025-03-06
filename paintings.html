@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
   
   <!-- ✅ Version: v1.2 -->
 </head>
@@ -37,6 +38,8 @@
     <a href="index.html">Home</a>
     <a href="paintings.html">Paintings</a>
     <a href="portraits.html">Portraits</a>
+    <a href="about.html">About</a>
+
   </nav>
   
   <h1>Paintings</h1>
@@ -48,7 +51,7 @@
     <!-- Example: l031.jpg, l032.jpg, etc. -->
     <!-- START LANDSCAPE IMAGES -->
     <script>
-      for (let i = 1; i <= 76; i++) {
+      for (let i = 1; i <= 69; i++) {
         let num = i.toString().padStart(3, "0"); // Format numbers (001, 002, etc.)
         document.write(`
           <a href="images/l${num}.jpg" class="glightbox" data-gallery="paintings">
@@ -73,5 +76,10 @@
       }
     </script>
   </div>
+  <footer>
+    <p><strong>Mirkovich Art</strong></p>
+    <p>(713) 385-5350</p>
+    <p><a href="mailto:nmartgallery@aol.com">nmartgallery@aol.com</a></p>
+  </footer>
 </body>
 </html>

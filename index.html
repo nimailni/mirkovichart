@@ -3,25 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Art Gallery</title>
+  <title>Welcome to Mirkovich Art</title>
   <link rel="stylesheet" href="styles.css" />
-  
-  <!-- GLightbox Styles (Loads once for all pages) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
+  <!-- ✅ Version: v1.1 -->
 </head>
+
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("Re-initializing GLightbox for Index page - v1.1"); // ✅ Version added in log
+
+    if (typeof GLightbox === "function") {
+      console.log("GLightbox found! Initializing...");
+      window.lightbox = GLightbox({
+        selector: ".glightbox",
+        descPosition: "none" // Ensures no captions/titles appear
+      });
+      console.log("GLightbox initialized successfully!");
+    } else {
+      console.error("GLightbox is not available on this page!");
+    }
+  });
+</script>
+
 <body>
+  <!-- ✅ Page Version: v1.1 -->
+
   <nav>
     <a href="index.html">Home</a>
     <a href="paintings.html">Paintings</a>
     <a href="portraits.html">Portraits</a>
+    <a href="about.html">About</a>
+
   </nav>
 
-  <h1>Welcome to the Art Gallery</h1>
-  <p>Explore our collection of paintings and portraits.</p>
+  <h1>Welcome to Mirkovich Art</h1>
 
+  <div class="bio-container">
+    <img src="images/ind01.jpg" alt="Nenad Mirkovich" class="bio-image left">
+    
+    <p>
+      <strong>World-renowned artist Nenad Mirkovich</strong>—whose first name means “surprise” in his native language—brings that very element to every canvas he touches.
+    </p>
+    <p>
+      From tranquil landscapes and crashing coastlines to peaceful symphonies, vibrant jazz bands, and lifelike portraits, his diverse repertoire continues to captivate collectors of all ages and backgrounds. Viewers often find it hard to believe that the same artist painted such a broad range of subjects, which only adds to Mirkovich's delight.
+    </p>
+    <p>
+      Born and raised in Belgrade (formerly part of Yugoslavia), Mirkovich grew up along the beautiful Danube River in a creative family of artists. His father, a well-known artist and illustrator, was his greatest inspiration.
+    </p>
 
+    <img src="images/ind02.jpg" alt="Mirkovich Painting" class="bio-image right">
 
+    <p>
+      Artists and friends visiting their home would bring young Nenad art books, fueling his passion for painting. His mother, who loved nature, instilled in him a lifelong appreciation for landscapes, while his fascination with people and their stories led him to portraiture—his favorite subject. In every face and pair of eyes, he sees and captures the essence of life, love, and pain.
+    </p>
+    <p>
+      Mirkovich's early achievements include serving as chief illustrator for a prominent national magazine in Yugoslavia and receiving several prestigious awards, such as a gold medal for Best Newcomer and Best in Show in Germany (1984), as well as Best of Show in Italy (1982).
+    </p>
+    <p>
+      In 1985, he made his home in Houston, Texas, where he continues to paint, fish, and cook with equal passion. Boasting over 200 fishing rods (along with homemade lures), he can spend hours immersed in the serenity of the water, in tune with nature.
+    </p>
+    <p>
+      His culinary talents have earned him praise as well—his signature “Chicken Nenad,” a gourmet dish beloved by his wife Donna, is a testament to his creativity in the kitchen.
+    </p>
+    <p>
+      Over the years, Mirkovich has painted numerous portraits of prominent dignitaries, celebrities, and families. Many collectors and art enthusiasts consider him among the finest living portrait artists, thanks to his remarkable ability to convey deep emotion through the interplay of light and shadow. Each painting is a testament to the “surprise” that his name promises—and to the boundless talent and passion that set Nenad Mirkovich apart.
+    </p>
+    <p>
+      See his pictures in the site section "categories" in the main menu and choose there by category style.
+    </p>
+    <p><strong>Thank you for visiting.</strong></p>
+  </div>
 
-
+  <footer>
+    <p><strong>Mirkovich Art</strong></p>
+    <p>(713) 385-5350</p>
+    <p><a href="mailto:nmartgallery@aol.com">nmartgallery@aol.com</a></p>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Nenad Mirkovich</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- ✅ Version: v1.1 -->
+</head>
+
+<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("Re-initializing GLightbox for About page - v1.1"); // ✅ Version added in log
+
+    if (typeof GLightbox === "function") {
+      console.log("GLightbox found! Initializing...");
+      window.lightbox = GLightbox({
+        selector: ".glightbox",
+        descPosition: "none" // Ensures no captions/titles appear
+      });
+      console.log("GLightbox initialized successfully!");
+    } else {
+      console.error("GLightbox is not available on this page!");
+    }
+  });
+</script>
+
+<body>
+  <!-- ✅ Page Version: v1.1 -->
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="paintings.html">Paintings</a>
+    <a href="portraits.html">Portraits</a>
+    <a href="about.html">About</a>
+  </nav>
+
+  <h1>About Nenad Mirkovich</h1>
+
+  <div class="bio-container">
+    <!-- ✅ First Image is now on the RIGHT -->
+    <img src="images/abo01.jpg" alt="Nenad Mirkovich" class="bio-image right">
+    
+    <p>
+      The singular beauty, vivid characterizations, and extraordinary drama and diversity are the hallmarks of this European-born artist. 
+      <strong>Nenad Mirkovich and Donna Petrovic</strong>.
+    </p>
+    <p>
+      Mirkovich's talent for creating artistic certainty in his compositions is exceptional.
+    </p>
+    <p>
+      The man whose first name means "surprise" in his native language delivers that element in his paintings of tranquil landscapes, crashing coastlines, 
+      peaceful symphonies, and energetic jazz bands.
+    </p>
+
+    <!-- ✅ Second Image is now on the LEFT -->
+    <img src="images/abo02.jpg" alt="Mirkovich Painting" class="bio-image left">
+
+    <p>
+      Collectors of all ages and of varied lifestyles find something in the diverse repertoire of Nenad Mirkovich to delight the senses.
+    </p>
+    <p>
+      He delights himself with the reactions of viewers when they discover that the same talented artist painted all these scenes. 
+      Nenad Mirkovich says the varied subject matter and styles he uses in his work are not so different as they first seem, however.
+    </p>
+    <p>
+      His paintings comprise juxtapositions of opposites—high drama with peaceful beauty, darkness and shadow with light and sunshine, movement with quiet. 
+      In a face or in a landscape, the elements that provide the surprise are much the same.
+    </p>
+    <p>
+      Born in Belgrade in 1951, Mirkovich has made his home in Houston, Texas, since 1985. He began painting and drawing as a young child, and his background 
+      as a portrait painter and magazine illustrator in Yugoslavia helped him to develop his varied styles, says his wife, Donna.
+    </p>
+    <p>
+      His passions besides painting are fishing and cooking. He owns more than 150 fishing rods, makes his own lures, and can sit in a boat for hours and hours, pulling out fish, Donna says. 
+      He also is a gourmet cook, and has developed a favorite dish he calls <strong>Nenad Chicken</strong>.
+    </p>
+    <p>
+      A fourth passion is music, which Mirkovich often combines with his art. Working mostly at night, Mirkovich paints with music playing in the background, 
+      usually jazz or classical pieces.
+    </p>
+    <p>
+      Often, also, there is music on his canvas; musicians and musical groups are favorite themes. One of a recently completed series featuring jazz groups, painted in an impressionist style, is titled <em>In the Mood</em>. 
+      The piece has both high energy and high drama and will appeal to both beginning collectors and music enthusiasts.
+    </p>
+  </div>
+
+  <footer>
+    <p><strong>Mirkovich Art</strong></p>
+    <p>(713) 385-5350</p>
+    <p><a href="mailto:nmartgallery@aol.com">nmartgallery@aol.com</a></p>
+  </footer>
+</body>
+</html>
