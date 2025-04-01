@@ -51,11 +51,11 @@
     <!-- Example: l031.jpg, l032.jpg, etc. -->
     <!-- START LANDSCAPE IMAGES -->
     <script>
-      for (let i = 1; i <= 63; i++) {
+      for (let i = 1; i <= 61; i++) {
         let num = i.toString().padStart(3, "0"); // Format numbers (001, 002, etc.)
         document.write(`
           <a href="images/l${num}.jpg" class="glightbox" data-gallery="paintings">
-              <img src="images/l${num}.jpg" alt="Painting ${i}">
+              <img src="images/l${num}.jpg" alt="Painting l ${i}">
           </a>
         `);
       }
@@ -66,11 +66,11 @@
     <!-- ✅ Portrait Images (p001 - p048) -->
     <!-- START PORTRAIT IMAGES -->
     <script>
-      for (let i = 1; i <= 84; i++) {
+      for (let i = 1; i <= 82; i++) {
         let num = i.toString().padStart(3, "0"); // Format numbers (001, 002, etc.)
         document.write(`
           <a href="images/p${num}.jpg" class="glightbox" data-gallery="paintings">
-              <img src="images/p${num}.jpg" alt="Painting ${30 + i}">
+              <img src="images/p${num}.jpg" alt="Painting p ${i}">
           </a>
         `);
       }
